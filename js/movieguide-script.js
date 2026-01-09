@@ -6,7 +6,7 @@ const result = document.getElementById('result');
 
 const getMovie = () => {
   let movieName = movieNameRef.value;
-  let url = `http://www.omdbapi.com/?t=${movieName}&apiKey=${apiKey}`;
+  let url = `/.netlify/functions/omdb?title=${movieName}`;
 
   if (movieName.length <= 0) {
     result.innerHTML = `<h3 class="msg">Please enter movie name</h3>`
